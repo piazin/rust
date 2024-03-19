@@ -13,4 +13,8 @@ pub fn memories() {
     // let y = true;
 
     // https://youtu.be/Qezouqaoxlo?t=580
+
+    // Variaveis que são alocadas na memoria heap
+    // o tempo de vida pode ser definido manaualmente ou pelo compilador
+    // let users = get_users();
 }
