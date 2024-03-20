@@ -34,7 +34,6 @@ pub fn primitives_types() {
     letra();
     tuplas();
     arrays();
-
 }
 
 fn letra() {
@@ -72,7 +71,7 @@ fn arrays() {
     let numbers = [1, 2, 3, 4, 5];
 
     println!("numbers {:?}", numbers[4]);
-    
+
     // index out of bounds error
     // println!("numbers {:?}", numbers[5]);
 

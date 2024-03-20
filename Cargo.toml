@@ -6,3 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[profile.release]
+stip = true # retirar símbolos de depuração do binário
+opt-level = "z" # otimização para tamanho do binário
+lto = true # link time optimization (otimização em tempo de link)
+codegen-units = 1 # número de unidades de compilação 
+panic = "abort" # remove traceback information 

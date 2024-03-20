@@ -1,13 +1,14 @@
 // dentro de io temos metodos para interagir com o terminal
 use std::io;
+use std::iter::FromIterator;
 
 pub fn string() {
-    // https://youtu.be/NKBNEJf-w70?t=1480
+    //let a = "A"; // 65 em ascii - in bynary 01000001
 
     // Heap
     // Heap String
     // String Dinamica
-    // String 
+    // String
     let mut s = String::new();
     // posso adcionar um char com o metodo push
     s.push('L');
@@ -35,10 +36,13 @@ pub fn string() {
     let s5: String = "Milton".into();
     println!("{}", s5);
 
-    console_input();
+    // console_input();
 }
 
 fn console_input() {
+    // repet o "-" 30 vezes
+    println!("{}", "-".repeat(30));
+
     let mut s = String::new();
     println!("Digite um texto");
 
@@ -50,5 +54,23 @@ fn console_input() {
         .read_line(&mut s)
         .expect("Error reading console");
 
-    println!("Você digitou: {}", s);
+    println!("Você digitou: {}", s.to_uppercase());
+    
+    /*
+    | String |    g     |                 🦀                  |        
+    |--------|----------|-------------------------------------|
+    | Unicode| 103      | 129408                              |
+    | Binary | 01100111 | 11110000 10011111 10100110 10000000 |
+     */
+    // quando usamos o metodo len() estamos pegando o tamanho em bytes e não em caracters
+    // https://www.vertex42.com/ExcelTips/unicode-symbols.html
+    let s_len = s.trim().len(); // combinators (metodos encadeados)
+    println!("Quantidade de bytes: {}", s_len);
+
+    // destá maneira podemos saber a real quantidade de caracteres de uma string
+    let s_len_chars = s.trim().chars().count();
+    println!("Quantidade de letras: {}", s_len_chars);
+
+    // replace
+    println!("Replace all L to l: {}", s.replace("L", "l"));
 }
