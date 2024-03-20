@@ -1,3 +1,4 @@
+#[allow(unused, dead_code)]
 pub fn functions() {
     // say_hello("Lucas");
 

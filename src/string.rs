@@ -39,6 +39,7 @@ pub fn string() {
     // console_input();
 }
 
+#[allow(unused, dead_code)]
 fn console_input() {
     // repet o "-" 30 vezes
     println!("{}", "-".repeat(30));
