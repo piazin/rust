@@ -21,24 +21,39 @@ pub fn ownership() {
     // print pointer
     println!("O valor de c é {:p}", c); //https://stackoverflow.com/a/27852760/19552432
 
-
     // https://chat.openai.com/share/ad5df033-0dbc-4096-a7ce-74153494f82b
     let s: String = String::from("Hamu"); // No Copy
-    let s1: String = s.clone(); // clone value 
-    // let s2: String = s; // move value to b transferencia de dono de s para s2
+    let s1: String = s.clone(); // clone value
+                                // let s2: String = s; // move value to b transferencia de dono de s para s2
     let s3: &String = &s; // referencia ao valor de s um emprestimo
 
     println!("O valor de s: {}", s);
     println!("O valor de S1: {}", s1);
     // println!("O valor de S2: {}", s2);
 
-    let name = "Milton".to_string();
+    let mut name = "Milton".to_string();
 
-    say_hello(&name);
-    say_goodbye(&name);
+    //say_hello(&name); // Borrow - Ref
+    //say_goodbye(&name);
+
+    add_prefix(&mut name);
+
+    // Podemos ter uma unica referencia caso a a variavel seja mutavel
+    // E varias caso seja imutavel
+    to_upper_case(&mut name);
 
     // em vez de passar uma ref podemos usar a treating clone() que vai realizar a copia do valor
     say_hello_clone(name.clone());
+}
+
+fn to_upper_case(text: &mut String) {
+    // usamos o * para dereferenciar a referencia text
+    *text = text.to_uppercase();
+}
+
+fn add_prefix(text: &mut String) {
+    *text = format!("FOO_{text}");
+    // text.push_str("_FOO"); // em alguns casos o rust já realiza a dereferencia
 }
 
 fn say_hello_clone(text: String) {
@@ -64,3 +79,4 @@ fn say_goodbye(text: String) {
     println!("Goodbye {text}");
 }
 */
+
