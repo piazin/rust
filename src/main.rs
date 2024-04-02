@@ -11,6 +11,7 @@ mod indicatif;
 */
 
 mod logger;
+mod test;
 
 /*
 use memories::memories;
@@ -24,6 +25,7 @@ use enums::enums;
 use indicatif::indicatif;
 */
 use logger::logger;
+use test::answer;
 
 fn main() {
     //variables();
@@ -37,6 +39,7 @@ fn main() {
     // indicatif();
 
     logger();
+    answer(25, 25);
 
     //primitives_types::primitives_types();
 }
