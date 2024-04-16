@@ -11,7 +11,11 @@ mod indicatif;
 */
 
 mod logger;
+<<<<<<< HEAD
 mod loops;
+=======
+mod test;
+>>>>>>> 988058e0485ec6c44a3c1ca9d6b761e0597aedc6
 
 /*
 use memories::memories;
@@ -25,7 +29,11 @@ use enums::enums;
 use indicatif::indicatif;
 */
 use logger::logger;
+<<<<<<< HEAD
 use loops::loops;
+=======
+use test::answer;
+>>>>>>> 988058e0485ec6c44a3c1ca9d6b761e0597aedc6
 
 fn main() {
     //variables();
@@ -39,7 +47,11 @@ fn main() {
     // indicatif();
 
     logger();
+<<<<<<< HEAD
     loops();
+=======
+    answer(25, 25);
+>>>>>>> 988058e0485ec6c44a3c1ca9d6b761e0597aedc6
 
     //primitives_types::primitives_types();
 }
