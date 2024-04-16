@@ -11,6 +11,7 @@ mod indicatif;
 */
 
 mod logger;
+mod loops;
 
 /*
 use memories::memories;
@@ -24,6 +25,7 @@ use enums::enums;
 use indicatif::indicatif;
 */
 use logger::logger;
+use loops::loops;
 
 fn main() {
     //variables();
@@ -37,6 +39,7 @@ fn main() {
     // indicatif();
 
     logger();
+    loops();
 
     //primitives_types::primitives_types();
 }
