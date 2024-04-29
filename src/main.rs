@@ -8,15 +8,12 @@ mod functions;
 mod ownership_borrowing;
 mod enums;
 mod indicatif;
-*/
-
 mod logger;
-<<<<<<< HEAD
 mod loops;
-=======
-mod test;
->>>>>>> 988058e0485ec6c44a3c1ca9d6b761e0597aedc6
+*/
+mod is_palindrome;
 
+use is_palindrome::Palindrome;
 /*
 use memories::memories;
 use primitives_types::primitives_types;
@@ -27,13 +24,9 @@ use functions::functions;
 use ownership_borrowing::ownership;
 use enums::enums;
 use indicatif::indicatif;
-*/
-use logger::logger;
-<<<<<<< HEAD
 use loops::loops;
-=======
-use test::answer;
->>>>>>> 988058e0485ec6c44a3c1ca9d6b761e0597aedc6
+use logger::logger;
+*/
 
 fn main() {
     //variables();
@@ -46,12 +39,12 @@ fn main() {
     // enums();
     // indicatif();
 
-    logger();
-<<<<<<< HEAD
-    loops();
-=======
-    answer(25, 25);
->>>>>>> 988058e0485ec6c44a3c1ca9d6b761e0597aedc6
+    // logger();
+    // loops();
+
+    // custom traits String
+    let s = String::from("civic");
+    s.is_palindrome();
 
     //primitives_types::primitives_types();
 }
