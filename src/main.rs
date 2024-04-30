@@ -10,11 +10,11 @@ mod enums;
 mod indicatif;
 mod logger;
 mod loops;
-*/
 mod is_palindrome;
+*/
 
-use is_palindrome::Palindrome;
 /*
+use is_palindrome::Palindrome;
 use memories::memories;
 use primitives_types::primitives_types;
 use string::string;
@@ -43,8 +43,8 @@ fn main() {
     // loops();
 
     // custom traits String
-    let s = String::from("civic");
-    s.is_palindrome();
+    // let s = String::from("civic");
+    // s.is_palindrome();
 
     //primitives_types::primitives_types();
 }
