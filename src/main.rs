@@ -27,6 +27,8 @@ use indicatif::indicatif;
 use loops::loops;
 use logger::logger;
 */
+mod pointer;
+use pointer::Pointer;
 
 fn main() {
     //variables();
@@ -47,4 +49,8 @@ fn main() {
     // s.is_palindrome();
 
     //primitives_types::primitives_types();
+
+    // raw pointer
+    let my_string = String::from("Hamu");
+    println!("{}", my_string.ptr()); // print pointer
 }
